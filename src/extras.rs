@@ -1,6 +1,5 @@
-use std::io::{stdin, stdout, BufWriter, Write};
+use std::io::{stdin, stdout, Write};
 use serde_json::Result;
-use ferris_says::say;
 
 use crate::modules::types::GenderCategory;
 use crate::modules::types::User;
@@ -65,15 +64,6 @@ pub fn looper() {
     for inx in 1..10 {
         println!("{}", inx)
     }
-}
-
-pub fn said(text:&str) {
-    let stdout = stdout();
-    let message = String::from(text);
-    let width = message.chars().count();
-
-    let writer = BufWriter::new(stdout.lock());
-    let _ = say(&message, width, writer);
 }
 
 pub fn is_greater(input:i32) -> bool {
