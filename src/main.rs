@@ -1,6 +1,7 @@
 //use crate::extras::typed_example;
 use crate::modules::types::Config;
 use crate::generics::test_generics;
+use crate::json::play_with_json;
 
 pub mod json;
 pub mod modules;
@@ -14,8 +15,13 @@ fn main() {
         generics: true
     };
 
+    if cfg.extra {}
+
+    if cfg.json {
+        let _ = play_with_json();
+    }
+
     if cfg.generics {
         test_generics(&vec![1,2,3]);
     }
 }
-

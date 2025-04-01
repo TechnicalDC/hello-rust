@@ -11,13 +11,11 @@ struct Employee {
 }
 
 #[warn(dead_code)]
-fn play_with_json() -> Result<()> {
-    //extras::display_user();
-    //let mut emp: Employee;
+pub fn play_with_json() -> Result<()> {
     let listen = stdin();
     let mut json_str: String = String::new();
     let _ = listen.read_line(&mut json_str);
-    let emp = serde_json::from_str::<Employee>(&json_str.as_str())?;
+    let emp: Employee = serde_json::from_str::<Employee>(&json_str.as_str())?;
     //emp = Employee {
     //    name: "dilip".to_string(),
     //    age: 28,
