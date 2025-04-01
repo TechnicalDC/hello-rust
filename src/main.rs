@@ -1,4 +1,3 @@
-//use crate::extras::typed_example;
 use crate::modules::types::Config;
 use crate::generics::test_generics;
 use crate::json::play_with_json;
@@ -22,6 +21,7 @@ fn main() {
     }
 
     if cfg.generics {
-        test_generics(&vec![1,2,3]);
+        test_generics();
+        //test_generics(&vec![1,2,3]);
     }
 }
