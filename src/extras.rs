@@ -75,15 +75,15 @@ pub fn is_greater(input:i32) -> bool {
 }
 
 pub fn get_state_name(state_code:&str){
-   let state_code = state_code;
-   let state = match state_code {
-      "MH" => {
-          println!("Found match for MH"); "Maharashtra"
-      },
-      "KL" => "Kerala",
-      "KA" => "Karnadaka",
-      "GA" => "Goa",
-      _ => "Unknown"
-   };
-   println!("State name is {}",state);
+    let state_code = state_code;
+    let state = match state_code {
+        "MH" => {
+            println!("Found match for MH"); "Maharashtra"
+        },
+        "KL" => "Kerala",
+        "KA" => "Karnadaka",
+        "GA" => "Goa",
+        _ => "Unknown"
+    };
+    println!("State name is {}",state);
 }
