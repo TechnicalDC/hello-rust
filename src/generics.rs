@@ -3,13 +3,6 @@ struct Rect<I>{
     length: I
 }
 
-//impl<I> Rect<I> {
-//    // J generic type is scoped to the implemented method only
-//    fn area<J>(&self) -> I {
-//        self.length + self.width
-//    }
-//}
-
 #[warn(unused_variables)]
 pub fn test_generics() {
     let rect: Rect<i32> = Rect {
