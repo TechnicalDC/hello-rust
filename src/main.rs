@@ -1,3 +1,5 @@
+use traits::test_traits;
+
 use crate::modules::types::Config;
 use crate::generics::test_generics;
 use crate::json::play_with_json;
@@ -6,12 +8,14 @@ pub mod json;
 pub mod modules;
 pub mod extras;
 pub mod generics;
+pub mod traits;
 
 fn main() {
     let cfg: Config = Config {
         json: false,
         extra: false,
-        generics: true
+        generics: false,
+        traits: true
     };
 
     if cfg.extra {}
@@ -22,6 +26,9 @@ fn main() {
 
     if cfg.generics {
         test_generics();
-        //test_generics(&vec![1,2,3]);
+    }
+
+    if cfg.traits {
+        test_traits();
     }
 }
