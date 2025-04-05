@@ -10,7 +10,9 @@ pub enum GenderCategory {
 pub struct Config {
     pub json: bool,
     pub extra: bool,
-    pub generics: bool
+    pub generics: bool,
+    pub traits: bool,
+    pub error: bool
 }
 
 #[derive(Serialize, Deserialize)]
