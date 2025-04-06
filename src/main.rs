@@ -14,11 +14,11 @@ pub mod traits;
 
 fn main() {
     let cfg: Config = Config {
-        json: false,
-        extra: false,
+        json    : false,
+        extra   : false,
         generics: false,
-        traits: false,
-        error: true
+        traits  : false,
+        error   : true
     };
 
     if cfg.extra {}
